@@ -11,6 +11,11 @@ jobs:
       run: export
     - name: ls
       run: ls /opt/hostedtoolcache/boost || true
+    - name: apt clang
+      run: |
+        sudo apt-add-repository 'deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic main'
+        sudo apt-get update
+        apt-cache search ^clang
 
   ubuntu-20:
     runs-on: ubuntu-20.04
@@ -19,3 +24,8 @@ jobs:
       run: export
     - name: ls
       run: ls /opt/hostedtoolcache/boost || true
+    - name: apt clang
+      run: |
+        sudo apt-add-repository 'deb http://apt.llvm.org/focal/ llvm-toolchain-focal main'
+        sudo apt-get update
+        apt-cache search ^clang
