@@ -21,9 +21,10 @@ jobs:
         echo BOOST_ROOT_1_72_0=$BOOST_ROOT_1_72_0
         echo "::set-env name=BOOST_ROOT::$BOOST_ROOT_1_72_0"
         echo BOOST_ROOT=$BOOST_ROOT
-        echo "::set-env name=foo::$HOME"
-        echo foo=$foo
-        printenv foo
+    - name: set?
+      run: |
+        echo BOOST_ROOT=$BOOST_ROOT
+        printenv BOOST_ROOT
 
 
 #  ubuntu-20:
