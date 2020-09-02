@@ -1,0 +1,21 @@
+name: Boost
+
+on:
+  - push
+
+jobs:
+  ubuntu-18:
+    runs-on: ubuntu-18.04
+    steps:
+    - name: env
+      run: export
+    - name: ls
+      run: ls /opt/hostedtoolcache/boost || true
+
+  ubuntu-20:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: env
+      run: export
+    - name: ls
+      run: ls /opt/hostedtoolcache/boost || true
